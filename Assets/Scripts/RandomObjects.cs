@@ -9,7 +9,7 @@ using System.Collections;
 
 public class RandomObjects : MonoBehaviour {
 
-	public Sprite img;
+    /*public Sprite img;
 	public Sprite img2;
 	public Sprite img3;
 	public Sprite img4;
@@ -48,57 +48,98 @@ public class RandomObjects : MonoBehaviour {
 	public Sprite img37;
 	public Sprite img38;
 	public Sprite img39;
-	public Sprite img40;
+	public Sprite img40;*/
 
-	void Start(){
+    public GameObject obj;
+    public GameObject obj2;
+    public GameObject obj3;
+    public GameObject obj4;
+    public GameObject obj5;
+    public GameObject obj6;
+    public GameObject obj7;
+    public GameObject obj8;
+    public GameObject obj9;
+    public GameObject obj10;
+    public GameObject obj11;
+    public GameObject obj12;
+    public GameObject obj13;
+    public GameObject obj14;
+    public GameObject obj15;
+    public GameObject obj16;
+    public GameObject obj17;
+    public GameObject obj18;
+    public GameObject obj19;
+    public GameObject obj20;
+    public GameObject obj21;
+    public GameObject obj22;
+    public GameObject obj23;
+    public GameObject obj24;
+    public GameObject obj25;
+    public GameObject obj26;
+    public GameObject obj27;
+    public GameObject obj28;
+    public GameObject obj29;
+    public GameObject obj30;
+    public GameObject obj31;
+    public GameObject obj32;
+    public GameObject obj33;
+    public GameObject obj34;
+    public GameObject obj35;
+    public GameObject obj36;
+    public GameObject obj37;
+    public GameObject obj38;
+    public GameObject obj39;
+    public GameObject obj40;
 
-		Sprite[] objectArray = new Sprite[40];
+    void Start(){
+
+		Mesh[] objectArray = new Mesh[40];
 
 		int r = Random.Range (0, 40);
 
 
-		objectArray[0] = img;
-		objectArray[1] = img2;
-		objectArray[2] = img3;
-		objectArray[3] = img4;
-		objectArray[4] = img5;
-		objectArray[5] = img6;
-		objectArray[6] = img7;
-		objectArray[7] = img8;
-		objectArray[8] = img9;
-		objectArray[9] = img10;
-		objectArray[10] = img11;
-		objectArray[11] = img12;
-		objectArray[12] = img13;
-		objectArray[13] = img14;
-		objectArray[14] = img15;
-		objectArray[15] = img16;
-		objectArray[16] = img17;
-		objectArray[17] = img18;
-		objectArray[18] = img19;
-		objectArray[19] = img20;
-		objectArray[20] = img21;
-		objectArray[21] = img22;
-		objectArray[22] = img23;
-		objectArray[23] = img24;
-		objectArray[24] = img25;
-		objectArray[25] = img26;
-		objectArray[26] = img27;
-		objectArray[27] = img28;
-		objectArray[28] = img29;
-		objectArray[29] = img30;
-		objectArray[30] = img31;
-		objectArray[31] = img32;
-		objectArray[32] = img33;
-		objectArray[33] = img34;
-		objectArray[34] = img35;
-		objectArray[35] = img36;
-		objectArray[36] = img37;
-		objectArray[37] = img38;
-		objectArray[38] = img39;
-		objectArray[39] = img40;
+		objectArray[0] = obj;
+		objectArray[1] = obj2;
+		objectArray[2] = obj3;
+		objectArray[3] = obj4;
+		objectArray[4] = obj5;
+		objectArray[5] = obj6;
+		objectArray[6] = obj7;
+		objectArray[7] = obj8;
+		objectArray[8] = obj9;
+		objectArray[9] = obj10;
+		objectArray[10] = obj11;
+		objectArray[11] = obj12;
+		objectArray[12] = obj13;
+		objectArray[13] = obj14;
+		objectArray[14] = obj15;
+		objectArray[15] = obj16;
+		objectArray[16] = obj17;
+		objectArray[17] = obj18;
+		objectArray[18] = obj19;
+		objectArray[19] = obj20;
+		objectArray[20] = obj21;
+		objectArray[21] = obj22;
+		objectArray[22] = obj23;
+		objectArray[23] = obj24;
+		objectArray[24] = obj25;
+		objectArray[25] = obj26;
+		objectArray[26] = obj27;
+		objectArray[27] = obj28;
+		objectArray[28] = obj29;
+		objectArray[29] = obj30;
+		objectArray[30] = obj31;
+		objectArray[31] = obj32;
+		objectArray[32] = obj33;
+		objectArray[33] = obj34;
+		objectArray[34] = obj35;
+		objectArray[35] = obj36;
+		objectArray[36] = obj37;
+		objectArray[37] = obj38;
+		objectArray[38] = obj39;
+		objectArray[39] = obj40;
 
-		this.gameObject.GetComponent<SpriteRenderer>().sprite = objectArray[r];
+		this.gameObject.GetComponent<MeshFilter>().mesh = objectArray[r];
 
 		if(r <= 7){
 			gameObject.tag = "metal";
