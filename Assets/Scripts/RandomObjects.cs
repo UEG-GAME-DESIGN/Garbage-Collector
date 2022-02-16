@@ -9,46 +9,7 @@ using System.Collections;
 
 public class RandomObjects : MonoBehaviour {
 
-    /*public Sprite img;
-	public Sprite img2;
-	public Sprite img3;
-	public Sprite img4;
-	public Sprite img5;
-	public Sprite img6;
-	public Sprite img7;
-	public Sprite img8;
-	public Sprite img9;
-	public Sprite img10;
-	public Sprite img11;
-	public Sprite img12;
-	public Sprite img13;
-	public Sprite img14;
-	public Sprite img15;
-	public Sprite img16;
-	public Sprite img17;
-	public Sprite img18;
-	public Sprite img19;
-	public Sprite img20;
-	public Sprite img21;
-	public Sprite img22;
-	public Sprite img23;
-	public Sprite img24;
-	public Sprite img25;
-	public Sprite img26;
-	public Sprite img27;
-	public Sprite img28;
-	public Sprite img29;
-	public Sprite img30;
-	public Sprite img31;
-	public Sprite img32;
-	public Sprite img33;
-	public Sprite img34;
-	public Sprite img35;
-	public Sprite img36;
-	public Sprite img37;
-	public Sprite img38;
-	public Sprite img39;
-	public Sprite img40;*/
+ 
 
     public GameObject obj;
     public GameObject obj2;
@@ -93,7 +54,7 @@ public class RandomObjects : MonoBehaviour {
 
     void Start(){
 
-		Mesh[] objectArray = new Mesh[40];
+        GameObject[] objectArray = new GameObject[40];
 
 		int r = Random.Range (0, 40);
 
@@ -139,9 +100,15 @@ public class RandomObjects : MonoBehaviour {
 		objectArray[38] = obj39;
 		objectArray[39] = obj40;
 
-		this.gameObject.GetComponent<MeshFilter>().mesh = objectArray[r];
+		/*this.gameObject.GetComponent<MeshFilter>().mesh = objectArray[r].GetComponent<MeshFilter>().sharedMesh;
+        this.gameObject.GetComponent<MeshRenderer>().material = objectArray[r].GetComponent<MeshRenderer>().sharedMaterial;*/
 
-		if(r <= 7){
+        if(this.gameObject.GetComponentsInChildren<Transform>().Length> 1)
+        GameObject.Destroy(this.gameObject.GetComponentsInChildren<Transform>()[1].gameObject);
+        GameObject i = GameObject.Instantiate(objectArray[r], this.transform);
+        i.GetComponent<Animator>().Play(0, -1, Random.value * 2);
+
+        if (r <= 7){
 			gameObject.tag = "metal";
 			SendMessage("metal",  SendMessageOptions.RequireReceiver);
 		}if(r >= 8 && r <= 15){
