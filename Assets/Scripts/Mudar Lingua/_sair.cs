@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class _sair : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class _sair : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		txt.text="Sair";
+        gameObject.GetComponent<TMP_Text>().text="Sair";
 		
 	}
 }

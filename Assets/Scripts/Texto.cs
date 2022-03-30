@@ -32,7 +32,7 @@ public class Texto : MonoBehaviour {
 			inClick = true;
 
 			GetComponent<AudioSource>().clip = clique;
-			GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().PlayOneShot(clique);
 		}
 		
 		inputRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -63,23 +63,23 @@ public class Texto : MonoBehaviour {
 				if (inputHit.transform.tag == "organico" && RandomGarbage.r != 1) {
 					pontosAuxiliar = AuxPontos.pontos;
 					AuxPontos.pontos = 0;
-					SceneManager.LoadScene (2);
+					SceneManager.LoadScene (3);
 				}if (inputHit.transform.tag == "vidro" && RandomGarbage.r != 4) {
 					pontosAuxiliar = AuxPontos.pontos;
 					AuxPontos.pontos = 0;
-					SceneManager.LoadScene (2);
+					SceneManager.LoadScene (3);
 				}if (inputHit.transform.tag == "plastico" && RandomGarbage.r != 2) {
 					pontosAuxiliar = AuxPontos.pontos;
 					AuxPontos.pontos = 0;
-					SceneManager.LoadScene (2);
+					SceneManager.LoadScene (3);
 				}if (inputHit.transform.tag == "metal" && RandomGarbage.r != 0) {
 					pontosAuxiliar = AuxPontos.pontos;
 					AuxPontos.pontos = 0;
-					SceneManager.LoadScene (2);
+					SceneManager.LoadScene (3);
 				}if (inputHit.transform.tag == "papel" && RandomGarbage.r != 3) {
 					pontosAuxiliar = AuxPontos.pontos;
 					AuxPontos.pontos = 0;
-					SceneManager.LoadScene (2);
+					SceneManager.LoadScene (3);
 				}
 			}
 		}

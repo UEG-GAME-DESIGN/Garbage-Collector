@@ -21,6 +21,8 @@ public class TextoDoRecord : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        txt.text = /*"Recorde: " +*/ Record.RecordAtual.ToString();//+ "\nPontos: " + Texto.pontosAuxiliar;
-	}
+        gameObject.GetComponent<TMP_Text>().text = /*"Recorde: " +*/ Record.RecordAtual.ToString();//+ "\nPontos: " + Texto.pontosAuxiliar;
+
+
+    }
 }

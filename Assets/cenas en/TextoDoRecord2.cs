@@ -7,19 +7,14 @@ objetivo: aparecer o record
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class TextoDoRecord2 : MonoBehaviour {
 	
-	Text txt;
-	
-	// Use this for initialization
-	void Start () {
-		txt = gameObject.GetComponent<Text>();
 
-	}
 	
 	// Update is called once per frame
 	void Update () {
-		txt.text="Record: " + Record.RecordAtual + "\nCurrent: " + Texto2.pontosAuxiliar;
-	}
+        gameObject.GetComponent<TMP_Text>().text = /*"Recorde: " +*/ Record.RecordAtual.ToString();//+ "\nPontos: " + Texto.pontosAuxiliar;
+    }
 }

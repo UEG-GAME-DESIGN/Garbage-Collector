@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class _play : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class _play : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		txt.text="Iniciar Jogo";
+        gameObject.GetComponent<TMP_Text>().text="Iniciar Jogo";
 		
 	}
 }

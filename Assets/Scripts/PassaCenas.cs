@@ -26,7 +26,7 @@ public class PassaCenas : MonoBehaviour {
 		Contador.contadorPlastico = 0;
 		Contador.contadorVidro = 0;
 		//Application.LoadLevel (2);
-		SceneManager.LoadScene (2);
+		SceneManager.LoadScene (3);
 
 	}
 	public void gameOverLixoTime(){

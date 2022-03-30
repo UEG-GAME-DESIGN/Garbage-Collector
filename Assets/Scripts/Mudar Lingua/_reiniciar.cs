@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class _reiniciar : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class _reiniciar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		txt.text="Reiniciar";
+        gameObject.GetComponent<TMP_Text>().text="Reiniciar";
 		
 	}
 }
